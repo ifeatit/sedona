@@ -4,7 +4,7 @@
 	height: 390px;
 	padding-top: 47px;
 	background: url('../pic/photo-background@1x.jpg') no-repeat;
-	@include image-2x('../pic/photo-background@2x.jpg', 100px, 25px);
+	@include image-2x('../pic/photo-background@2x.jpg');
 	background-position: 50% 0;
 	background-size: 765px 512px;
 
