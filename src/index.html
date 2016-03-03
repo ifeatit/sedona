@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Sedona</title>
+  <meta name="description" content="Sedona">
+  <meta name="author" content="Yury Zaytsev">
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic-ext,latin,cyrillic">
+  <link rel="stylesheet" href="css/main.css">
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body class="page">
+  //= template/sprite.symbol.html
+  <div class="main-header">
+    <nav class="main-menu">
+      <input class="main-menu__toggle-checkbox" type="checkbox" id="toggle-menu-checkbox" name="toggle-menu-checkbox">
+      <label class="main-menu__toggle main-menu__toggle--open" for="toggle-menu-checkbox">
+        <svg><use xlink:href="#icon-menu"/></svg>
+      </label>
+      <label class="main-menu__toggle main-menu__toggle--close" for="toggle-menu-checkbox">
+        <svg><use xlink:href="#icon-menu--close"/></svg>
+      </label>
+      <ul class="main-menu__list">
+        <li class="main-menu__list-item"><a class="main-menu__list-link main-menu__list-link--disabled" href="#">Информация</a></li>
+        <li class="main-menu__list-item"><a class="main-menu__list-link main-menu__list-link--disabled" href="#">Фото и Видео</a></li>
+        <li class="main-menu__list-item"><a class="main-menu__list-link main-menu__list-link--disabled" href="#">Карта штата</a></li>
+        <li class="main-menu__list-item"><a class="main-menu__list-link" href="#">Гостиницы</a></li>
+        <li class="main-menu__list-item">
+          <a class="main-menu__list-link main-menu__list-link--logo logo" href="index.html">
+            <img src="img/logo-sedona.png" width="138" height="70" alt="logo-sedona">
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div class="index-content">
+    <section class="headline">
+      <div class="headline__sub-title"> 
+        <span class="headline__sub-title-first-row">
+          <svg><use xlink:href="#text-welcome"/></svg>
+        </span>
+        <span class="headline__sub-title-second-row">
+          <svg><use xlink:href="#text-tothegorgeous"/></svg>
+        </span>
+      </div>
+      <span class="headline__main-title">
+        <svg><use xlink:href="#text-sedona"/></svg>
+      </span>
+      <span class="headline__quote">
+        <svg><use xlink:href="#text-becausecanyon"/></svg>
+      </span>
+    </section>
+    <section class="intro">
+      <h2 class="intro__title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
+      <p class="intro__text">Рассмотрим 5 причин, по которым Седона круче чем гранд каньон!</p>
+    </section>
+    <div class="single-promo single-promo--left-float"> 
+      <div class="single-promo__title">
+        Настоящий<br>
+        городок
+      </div>
+      <div class="promo__number">&ndash;№1&ndash;</div>
+      <p class="promo__description">Седона не атракцион для туристов, там течет своя жизнь</p>
+    </div>
+    <section class="features-list">
+      <div class="features-item features-item--appartment">
+        <h2 class="features-item__title">Жилье</h2>
+        <div class="features-item__description">Рекомендуем пожить в настоящем мотеле, все как в кино!</div>
+      </div>
+      <div class="features-item features-item--food">
+        <h2 class="features-item__title">Еда</h2>
+        <div class="features-item__description">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</div>
+      </div>
+      <div class="features-item features-item--souvenirs">
+        <h2 class="features-item__title">Сувениры</h2>
+        <div class="features-item__description">Не только китайского, но и местного производства!</div>
+      </div>
+    </section>
+    <div class="single-promo single-promo--right-float"> 
+      <div class="single-promo__title">
+        Там есть Мост<br> 
+        Дьявола
+      </div>
+      <div class="promo__number">&ndash;№2&ndash;</div>
+      <p class="promo__description">Да, по нему можно пройти! Если, конечно, вы осмелитесь</p>
+    </div>
+    <div class="promo-list">
+      <div class="promo-list__item">
+        <h2 class="promo-list__title">Небольшая площадь</h2>
+        <div class="promo-list__number">&ndash;№3&ndash;</div>
+        <p class="promo-list__description">Все достопримеча­тельности находятся очень близко</p>
+      </div>
+      <div class="promo-list__item">
+        <h2 class="promo-list__title">Красивая дорога</h2>
+        <div class="promo-list__number">&ndash;№4&ndash;</div>
+        <p class="promo-list__description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+      </div>
+      <div class="promo-list__item">
+        <h2 class="promo-list__title">Мало туристов</h2>
+        <div class="promo-list__number">&ndash;№5&ndash;</div>
+        <p class="promo-list__description">Большинство едет в Гранд Каньон и толпится там</p>
+      </div>
+    </div>
+    <section class="search-hotel">
+      <div class="search-hotel__title">Заинтересовались?</div>
+      <p class="search-hotel__description">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+      <div class="search-hotel__btn">Поиск гостиницы в Седоне</div>
+      <div class="search-hotel-popup search-hotel-popup--close">
+        <form class="search-hotel-popup__form" action="/search" method="post">
+          <fieldset class="search-hotel-popup__row">
+            <label class="search-hotel-popup__label" for="date-in">Дата заезда:</label>
+            <input class="search-hotel-popup__input search-hotel-popup__input--date" type="date" name="date-in" id="date-in" value="2014-04-24">
+            <span class="search-hotel-popup__icon-calendar"></span>
+          </fieldset>
+          <fieldset class="search-hotel-popup__row">
+            <label class="search-hotel-popup__label" for="date-out">Дата выезда:</label>
+            <input class="search-hotel-popup__input search-hotel-popup__input--date" type="date" name="date-out" id="date-out" value="2014-07-04">
+            <span class="search-hotel-popup__con-calendar"></span>
+          </fieldset>
+          <fieldset class="search-hotel-popup__row">
+            <fieldset class="search-hotel-popup__counter">
+              <label class="search-hotel-popup__label" for="counter-adult">Взрослые:</label>
+              <button class="search-hotel-popup__icon-minus" type="button" tabindex="-1"></button>
+              <input class="search-hotel-popup__input search-hotel-popup__input--counter" type="text" name="counter-adult" id="counter-adult" value="2">
+              <button class="search-hotel-popup__input__icon-plus" type="button" tabindex="-1"></button>
+            </fieldset>
+            <fieldset class="search-hotel-popup__counter">
+              <label class="search-hotel-popup__label" for="counter-children">Дети:</label>
+              <button class="search-hotel-popup__icon-minus" type="button" tabindex="-1"></button>
+              <input class="search-hotel-popup__input search-hotel-popup__input--counter" type="text" name="counter-children" id="counter-children" value="0">
+              <button class="search-hotel-popup__input__icon-plus" type="button" tabindex="-1"></button>
+            </fieldset>
+          </fieldset>
+          <input class="search-hotel-popup__btn" type="submit" value="Найти">
+        </form>
+      </div>
+    </section>
+  </div>
+  <div class="map-footer">
+    <div class="map-footer__wrapper"></div>
+    <div class="main-footer">
+      <section class="main-footer__hashtag"><a class="main-footer__hashtag-link" href="">#Visitsedona</a></section>
+      <section class="main-footer__social-links">
+        <ul class="social-links-list">
+          <li><a class="social-links-list__item social-links-list__item--twiter" href="#">twitter</a></li>
+          <li><a class="social-links-list__item social-links-list__item--facebook" href="#">facebook</a></li>
+          <li><a class="social-links-list__item social-links-list__item--youtube" href="#">youtube</a></li>
+        </ul>
+      </section>
+      <section class="main-footer__copyright">
+        <div class="copyright-link">
+          <p class="copyright-link__title">Website by</p>
+          <div class="copyright-link__icon--by"></div>
+        </div>
+        <div class="copyright-link">
+          <div class="copyright-link__title">for</div>
+          <div class="copyright-link__icon--for"></div>
+        </div>
+      </section>
+    </div>
+  </div>
+  <script src="js/main.js"></script>
+</body>
+</html>
+

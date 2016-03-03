@@ -1,0 +1,14 @@
+/*------------------------------------*\
+    #UTILS - FUNCTIONS
+\*------------------------------------*/
+
+
+// Calculate rem
+@function rem($pixels, $context: $font-size-browser) {
+  @return #{$pixels/$context}rem
+}
+
+// Calculate line-height
+@function lh($pixels, $context) {
+  @return #{$pixels/$context}
+}

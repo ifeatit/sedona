@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Sedona</title>
+  <meta name="description" content="Sedona">
+  <meta name="author" content="Yury Zaytsev">
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic-ext,latin,cyrillic">
+  <link rel="stylesheet" href="css/main.css">
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body class="page">
+  <div class="main-header">
+    <nav class="main-menu">
+      <ul class="main-menu__list">
+        <li class="menu__list-item menu__list-item--active"><a href="#">Информация</a><li>
+        <li class="menu__list-item menu__list-item--disabled"><a href="#">Фото и Видео</a></li>
+        <li class="menu__list-item">
+          <a class="logo" href="#">
+            <img src="" width="" height="" alt="logo-sedona">
+          </a>
+        </li>
+        <li class="menu__list-item menu__list-item--disabled"><a href="#">Карта штата</a></li>
+        <li class="menu__list-item menu__list-item--disabled"><a href="#">Гостиницы</a></li>
+        <a class="main-menu__toggle main-menu__toggle--close" href="#"></a>
+        <p class="main-menu__page-name"></p>
+      </ul>
+    </nav>
+  </div>
+  <div class="index-content">
+    <div class="widgets">
+      <div class="widgets__item">
+        <form class="filter-hotels" action="/filter" method="post">
+          <div class="filter-hotels__options">
+            <fieldset class="filter-fieldset">
+              <legend class="filter-fieldset__title">Инфраструктура:</legend>
+              <ul class="filter-fieldset__list">
+                <li class="filter-fieldset__list-item">
+                  <input class="filter-fieldset__checkbox" id="check-f-1" type="checkbox" name="facilities" value="val-1" checked>
+                  <label class="filter-fieldset__label" for="check-f-1">Бассейн</label>
+                </li>
+                <li class="filter-fieldset__list-item">
+                  <input class="filter-fieldset__checkbox" id="check-f-2" type="checkbox" name="facilities" value="val-2">
+                  <label class="filter-fieldset__label" for="check-f-2">Парковка</label>
+                </li>
+                <li class="filter-fieldset__list-item">
+                  <input class="filter-fieldset__checkbox" id="check-f-3" type="checkbox" name="facilities" value="val-3">
+                  <label class="filter-fieldset__label" for="check-f-3">Wi-Fi</label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="filter-fieldset">
+              <legend class="filter-fieldset__title">Тип жилья:</legend>
+              <ul class="filter-fieldset__list">
+                <li class="filter-fieldset__list-item">
+                  <input class="filter-fieldset__checkbox" id="check-h-1" type="checkbox" name="housing" value="val-1" checked>
+                  <label class="filter-fieldset__label" for="check-h-1">Гостиница</label>
+                </li>
+                <li class="filter-fieldset__list-item">
+                  <input class="filter-fieldset__checkbox" id="check-h-2" type="checkbox" name="housing" value="val-2" checked>
+                  <label class="filter-fieldset__label" for="check-h-2">Мотель</label>
+                </li>
+                <li class="filter-fieldset__list-item">
+                  <input class="filter-fieldset__checkbox" id="check-h-3" type="checkbox" name="housing" value="val-3" checked>
+                  <label class="filter-fieldset__label" for="check-h-3">Апартаменты</label>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
+          <div class="filter-hotels__range">
+            <fieldset class="filter-fieldset filter-fieldset--range">
+              <legend class="filter-fieldset__title">Стоимость в&nbsp;сутки (Р):</legend>
+              <div class="filter-fieldset__price-controls" id="price-controls">
+                <div class="filter-fieldset__price-group">
+                  <label>от <input class="filter-fieldset__input-price filter-fieldset__input-price--min" type="text" name="price-from" value="0"></label>
+                  <label>до <input class="filter-fieldset__input-price filter-fieldset__input-price--max" type="text" name="price-to" value="3000"></label>
+                </div>
+                <div class="filter-fieldset__range">
+                  <div class="filter-fieldset__scale">
+                    <button class="filter-fieldset__scale-slider filter-fieldset__scale-slider--min" type="button" tabindex="-1"></button>
+                    <button class="filter-fieldset__scale-slider filter-fieldset__scale-slider--max" type="button" tabindex="-1"></button>
+                  </div>
+                </div>
+              </div>
+              <button class="filter-hotels__btn" type="submit">Показать</button>
+            </fieldset>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="sorting">
+      <p class="sorting__sort-result">Найдено: <span class="sorting__sort-result-value">3</span></p>
+      <div class="sorting__sort-by sort-by">
+        <p class="sort-by__title">Сортировка: </p>
+        <ul class="sort-by__list">
+          <li class="sort-by__list-item sort-by__list-item--active"><a href="#">По цене</a></li>
+          <li class="sort-by__list-item"><a href="#">По типу</a></li>
+          <li class="sort-by__list-item"><a href="#">По рейтингу</a></li>
+        </ul>
+      </div>
+      <div class="sorting__sort-arrows">
+        <a class="sorting__arrow-up" href="#"></a>
+        <a class="sorting__arrow-down sorting__arrow-down--active" href="#"></a>
+      </div>
+    </div>
+    <div class="catalog">
+      <div class="catalog__list">
+        <article class="catalog__list-item">
+          <div class="catalog__list-item-info-wrapper">
+            <a class="catalog__list-item-preview" href="#">
+              <img src="" width="" height="" alt="">
+            </a>
+            <div class="catalog__list-item-description">
+              <h1 class="catalog__list-item-title">Amara Resort & SPA</h1>
+              <div class="catalog__list-item-properties">
+                <p class="catalog__list-item-propertie">Гостинница</p>
+                <p class="catalog__list-item-propertie">От 3500 Р.</p>
+              </div>
+              <div class="catalog__btn catalog__btn--more">Подробнее</div>
+              <div class="catalog__btn catalog__btn--book">Забронировать</div>
+            </div>
+            <div class="stars-raiting">
+              <div class="stars-raiting__stars" data-raiting="4">
+              </div>
+              <div class="stars-raiting__value">Рейтинг: <span itemprop="ratingValue">8,5</span></div>
+            </div>
+          </div>
+        </article>
+        <article class="catalog__list-item">
+          <div class="catalog__list-item-info-wrapper">
+            <a class="catalog__list-item-preview" href="#">
+              <img src="" width="" height="" alt="">
+            </a>
+            <div class="catalog__list-item-description">
+              <h1 class="catalog__list-item-title">Desert Quail Inn</h1>
+              <div class="catalog__list-item-properties">
+                <p class="catalog__list-item-propertie">Мотель</p>
+                <p class="catalog__list-item-propertie">от 2000 р.</p>
+              </div>
+              <div class="catalog__btn catalog__btn--more">Подробнее</div>
+              <div class="catalog__btn catalog__btn--book">Забронировать</div>
+            </div>
+            <div class="stars-raiting">
+              <div class="stars-raiting__stars" data-raiting="5">
+              </div>
+              <div class="stars-raiting__value">Рейтинг: <span itemprop="ratingValue">10</span></div>
+            </div>
+          </div>
+        </article>
+        <article class="catalog__list-item">
+          <div class="catalog__list-item-info-wrapper">
+            <a class="catalog__list-item-preview" href="#">
+              <img src="" width="" height="" alt="">
+            </a>
+            <div class="catalog__list-item-description">
+              <h1 class="catalog__list-item-title"></h1>
+              <div class="catalog__list-item-properties">
+                <p class="catalog__list-item-propertie">Апартаменты</p>
+                <p class="catalog__list-item-propertie">от 4000 р.</p>
+              </div>
+              <div class="catalog__btn catalog__btn--more">Подробнее</div>
+              <div class="catalog__btn catalog__btn--book">Забронировать</div>
+            </div>
+            <div class="stars-raiting">
+              <div class="stars-raiting__stars" data-raiting="4">
+              </div>
+              <div class="stars-raiting__value">Рейтинг: <span itemprop="ratingValue">8,5</span></div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+  <div class="main-footer">
+    <section class="main-footer__hashtag"><a class="main-footer__hashtag-link" href="">#Visitsedona</a></section>
+    <section class="main-footer__social-links">
+      <ul class="social-links-list">
+        <li><a class="social-links-list__item social-links-list__item--twiter" href="#">twitter</a></li>
+        <li><a class="social-links-list__item social-links-list__item--facebook" href="#">facebook</a></li>
+        <li><a class="social-links-list__item social-links-list__item--youtube" href="#">youtube</a></li>
+      </ul>
+    </section>
+    <section class="main-footer__copyright">
+      <div class="copyright-link">
+        <p class="copyright-link__title">Website by</p>
+        <div class="copyright-link__icon--by"></div>
+      </div>
+      <div class="copyright-link">
+        <div class="copyright-link__title">for</div>
+        <div class="copyright-link__icon--for"></div>
+      </div>
+    </section>
+  </div>
+  <script src="js/main.js"></script>
+</body>
+</html>
+

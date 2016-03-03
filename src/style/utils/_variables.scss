@@ -1,0 +1,118 @@
+/*------------------------------------*\
+    #UTILS - VARIABLES
+\*------------------------------------*/
+
+//== Colors
+//
+//## Main colors for use across project.
+
+$white:                 #FFFFFF;
+$black:                 #000000;
+$blue-base:             #81B3D2;
+$blue-dark:             #669EC0;
+$blue-darker:           #5496BD;
+$brown-base:            #766357;
+$brown-light:           #604E43;             
+$brown-lighter:         #503E33;              
+$gray-light:            #F2F2F2;             
+$gray-dark:             #EBEBEB;    
+$gray-darker:           #666666;           
+
+
+//== Scaffolding
+//
+//## Settings for some of the most global styles.
+
+//** Background color for `<body>`.
+$body-bg:               $gray-light;
+//** Global text color on `<body>`.
+$text-color:            $black;
+$label-color:           $white;
+
+//** Global textual link color.
+$link-color:            $black;
+$link-hover-color:      $blue-base;
+$link-hover-decoration: none;
+
+
+//== Typography
+//
+//## Font, line-height, and color for body text, headings, and more.
+
+$font-family-sans-serif:  'PT Sans', Arial, sans-serif;
+$font-family-base:        $font-family-sans-serif;
+
+$font-size-browser:       16; 
+$font-size-base:          14;
+
+$line-height-base:        21 / $font-size-base; 
+
+
+//== Tables
+//
+//## Customizes the `.table` component with basic values, each used across all table variations.
+
+
+//== Forms
+//
+//##
+
+
+
+//== Dropdowns
+//
+//## Dropdown menu container and contents.
+
+
+
+//== Media queries breakpoints
+//
+//## Define the breakpoints at which your layout will change, adapting to different screen sizes.
+
+$bp-xsmall: 						320px;
+$bp-small: 							480px;
+$bp-medium: 						768px;
+$bp-large: 							960px;
+$bp-xlarge: 						1280px;
+$bp-xxlarge: 						1440px;
+
+
+//== Navbar
+//
+//##
+
+
+//== Navs
+//
+//##
+
+
+//== Pagination
+//
+//##
+
+
+
+//== Pager
+//
+//##
+
+
+//== Form states and alerts
+//
+//## Define colors for form feedback states and, by default, alerts.
+
+
+
+
+//== Labels
+//
+//##
+
+
+
+//== Modals
+//
+//##
+
+
