@@ -3,7 +3,8 @@
 	box-sizing: border-box;
 	height: 390px;
 	padding-top: 47px;
-	background: url('../pic/photo-background@1x.jpg') no-repeat;
+	background-image: url('../pic/photo-background@1x.jpg');
+	background-repeat: no-repeat;
 	@include image-2x('../pic/photo-background@2x.jpg');
 	background-position: 50% 0;
 	background-size: 765px 512px;
@@ -29,7 +30,6 @@
 
 .headline__sub-title {
 	margin: 0 auto;
-	width: 195px;
 }
 
 
