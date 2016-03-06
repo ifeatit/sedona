@@ -12,3 +12,8 @@
 @function lh($pixels, $context) {
   @return #{$pixels/$context}
 }
+
+// Calculate percentage width
+@function percentage($pixels, $context) {
+  @return $pixels/$context*100%
+}

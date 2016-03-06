@@ -43,8 +43,8 @@ var path = {
     html: 'src/*.html',
     js: 'src/js/main.js',
     style: 'src/style/main.scss',
-    img: 'src/img/**/*.{png,jpg}',
-    imgSvg: 'src/img/**/*.svg',
+    img: 'src/img/*.*',
+    imgSvg: 'src/img/sprite-svg/*.svg',
     pic: 'src/pic/**/*.*',
     fonts: 'src/fonts/**/*.*'
   },
@@ -52,8 +52,8 @@ var path = {
     html: 'src/**/*.html',
     js: 'src/js/**/*.js',
     style: 'src/style/**/*.scss',
-    img: 'src/img/**/*.{png,jpg}',
-    imgSvg: 'src/img/**/*.svg',
+    img: 'src/img/*.*',
+    imgSvg: 'src/img/sprite-svg/*.svg',
     pic: 'src/pic/**/*.*',
     fonts: 'src/fonts/**/*.*'
   },
@@ -129,7 +129,7 @@ gulp.task('image:build', function () {
   gulp.src(path.src.img) 
     .pipe(imagemin({
       progressive: true,
-      svgoPlugins: [{removeViewBox: false}],
+      svgoPlugins: [{removeViewBox: false},{removeFill: false}],
       use: [pngquant()],
       interlaced: true
     }))

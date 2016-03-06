@@ -13,8 +13,9 @@
 
 .main-menu__toggle {
   position: absolute;
-  right: (20/320*100%);
+  right: percentage(20,$bp-xsmall);
   display: inline-block;
+
 
   &,
   & > svg {
@@ -50,7 +51,7 @@
   z-index: 1;
 }
 
-@media screen and (max-width: ($bp-medium - 1)) {
+@media screen and (max-width: #{($bp-medium - 1)}px) {
   .main-menu__list-item {
     background-color: $blue-base;
     border-top: 1px solid #9AC2DB;

@@ -69,12 +69,12 @@ $line-height-base:        21 / $font-size-base;
 //
 //## Define the breakpoints at which your layout will change, adapting to different screen sizes.
 
-$bp-xsmall: 						320px;
-$bp-small: 							480px;
-$bp-medium: 						768px;
-$bp-large: 							960px;
-$bp-xlarge: 						1280px;
-$bp-xxlarge: 						1440px;
+$bp-xsmall: 						320;
+$bp-small: 							480;
+$bp-medium: 						768;
+$bp-large: 							960;
+$bp-xlarge: 						1280;
+$bp-xxlarge: 						1440;
 
 
 //== Navbar
