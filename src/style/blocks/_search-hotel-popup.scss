@@ -60,15 +60,18 @@
     position: absolute;
     right: 0;
     bottom: 0;
+    box-sizing: border-box;
     width: 38px;
     height: 38px;
     cursor: pointer;
     fill: #B2B2B2;
-
+    border-top: 2px solid $gray-light;
+    border-right: 2px solid $gray-light;
+    border-bottom: 2px solid $gray-light;
 
     & > svg {
       width: 20px;
-      height: 38px;
+      height: 34px;
     }
 
     &:hover {
@@ -125,13 +128,28 @@
 
 
       &:hover {
-        background-color: $gray-dark; 
-        border: 2px solid $gray-dark;       
+        border: 2px solid $gray-dark;
+        background-color: $gray-dark;        
       }
+
       &:focus {
         border: 2px solid $gray-light;
         background-color: $white;
         outline: none;
+      }
+      
+      &:hover ~ .search-hotel-popup__icon-calendar {
+        border-top: 2px solid $gray-dark;
+        border-right: 2px solid $gray-dark;
+        border-bottom: 2px solid $gray-dark;
+        background-color: $gray-dark; 
+      }
+
+      &:focus ~ .search-hotel-popup__icon-calendar {
+        border-top: 2px solid $gray-light;
+        border-right: 2px solid $gray-light;
+        border-bottom: 2px solid $gray-light;
+        background-color: $white;
       }
     }
 
