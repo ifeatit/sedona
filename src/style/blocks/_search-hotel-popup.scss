@@ -38,6 +38,11 @@
 
   &__counter {
     margin: 0;
+
+
+    &--right {
+      float: right;
+    }
   }
 
   &__btn-open {
