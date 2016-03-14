@@ -60,7 +60,7 @@
     position: absolute;
     right: 0;
     bottom: 0;
-    width: 34px;
+    width: 36px;
     height: 34px;
     cursor: pointer;
     fill: #B2B2B2;
@@ -72,7 +72,7 @@
 
     & > svg {
       width: 20px;
-      height: 34px;
+      height: 100%;
     }
 
     &:hover {
