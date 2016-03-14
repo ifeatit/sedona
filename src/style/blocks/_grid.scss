@@ -7,29 +7,61 @@
 .grid {
   lost-utility: clearfix;
   width: 100%;
+  
+  @include bp-xsmall {
+    &__xsmall-col-1-2 {
+      lost-column: (1/2) (0) (0);
+    }
+  }
 
   @include bp-medium {
-    &__col-1 {
+    &__medium-col-1 {
       lost-column: 1;
     }
 
-    &__col-1-6 {
+    &__medium-col-1-6 {
       lost-column: (1/6) (0) (0);
     }
 
-    &__col-2-6 {
+    &__medium-col-2-6 {
       lost-column: (2/6) (0) (0);
     }
 
-    &__col-3-6 {
+    &__medium-col-3-6 {
       lost-column: (3/6) (0) (0);
     }
 
-    &__col-4-6 {
+    &__medium-col-4-6 {
       lost-column: (4/6) (0) (0);
     }
 
-    &__col-5-6 {
+    &__medium-col-5-6 {
+      lost-column: (5/6) (2) (0);
+    }
+  }
+
+  @include bp-xlarge {
+    &__xlarge-col-1 {
+      lost-column: 1;
+    }
+
+    &__xlarge-col-1-6 {
+      lost-column: (1/6) (0) (0);
+    }
+
+    &__xlarge-col-2-6 {
+      lost-column: (2/6) (0) (0);
+    }
+
+    &__xlarge-col-3-6 {
+      lost-column: (3/6) (0) (0);
+    }
+
+    &__xlarge-col-4-6 {
+      lost-column: (4/6) (0) (0);
+    }
+
+    &__xlarge-col-5-6 {
       lost-column: (5/6) (2) (0);
     }
   }

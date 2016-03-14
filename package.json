@@ -19,6 +19,8 @@
   },
   "homepage": "https://github.com/ifeatit/sedona#readme",
   "devDependencies": {
+    "a11y-toggle": "^1.0.0",
+    "autoprefixer": "^6.3.3",
     "browser-sync": "^2.11.1",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
@@ -27,6 +29,7 @@
     "gulp-cssnano": "^2.1.1",
     "gulp-imagemin": "^2.4.0",
     "gulp-plumber": "^1.1.0",
+    "gulp-postcss": "^6.1.0",
     "gulp-rigger": "^0.5.8",
     "gulp-rimraf": "^0.2.0",
     "gulp-sass": "^2.2.0",
@@ -37,9 +40,8 @@
     "gulp-uglify": "^1.5.2",
     "gulp-watch": "^4.3.5",
     "imagemin-pngquant": "^4.2.0",
+    "lost": "^6.7.2",
     "precommit-hook": "^3.0.0"
   },
-  "pre-commit": [
-    
-  ]
+  "pre-commit": []
 }

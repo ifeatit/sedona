@@ -1,0 +1,41 @@
+.social-links-list {
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+  list-style: none;
+
+
+  &__link {
+    display: block;
+    padding: 18px;
+    vertical-align: top;
+    background-color: $blue-base;
+    fill: $white;
+
+
+    &:hover {
+      background-color: $blue-dark;
+    }
+  
+    &:active {
+      fill: #88B6D1;
+      background-color: $blue-darker;
+    }
+
+    & > svg {
+      display: block;
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &__item {
+    display: inline-block;
+    margin-right: 6px;
+
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+}

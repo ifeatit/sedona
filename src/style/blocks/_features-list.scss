@@ -1,7 +1,7 @@
 .features-list {
   padding-top: 45px;
-  padding-left: percentage(68,$bp-xsmall);
-  padding-right: percentage(40,$bp-xsmall);
+  padding-left: calc-percent(68,$bp-xsmall);
+  padding-right: calc-percent(40,$bp-xsmall);
 
   &__item {
     margin-bottom: 40px;
@@ -11,8 +11,8 @@
     margin-top: 0;
     position: relative;
     font-weight: bold;
-    font-size: rem(18);
-    line-height: lh(26,18);
+    font-size: calc-rem(18);
+    line-height: calc-lh(26,18);
   }
 
   &__icon {
@@ -34,7 +34,7 @@
 
   &__description {
     font-weight: normal;
-    font-size: rem(14);
-    line-height: lh(26,14);
+    font-size: calc-rem(14);
+    line-height: calc-lh(26,14);
   }
 }

@@ -1,0 +1,22 @@
+.search-hotel {
+  padding-top: 30px;
+  text-align: center;
+
+
+  &__title {
+    padding-bottom: 20px;
+    font-weight: bold;
+    font-size: calc-rem(21);
+    line-height: calc-lh(26,21);
+  } 
+
+  &__description {
+    margin: 0;
+    padding-bottom: 30px;
+    padding-left: calc-percent(30, $bp-xsmall);
+    padding-right: calc-percent(30, $bp-xsmall);
+    font-weight: normal;
+    font-size: calc-rem(14);
+    line-height: calc-lh(21,14);
+  }
+}

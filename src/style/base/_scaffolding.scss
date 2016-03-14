@@ -14,8 +14,8 @@ body > svg {
 
 body {
   font-style: normal;
-  font-size: rem(18);
-  line-height: lh(40,18);
+  font-size: calc-rem(18);
+  line-height: calc-lh(40, 18);
   font-family: $font-family-base;
   color: $text-color;
   text-transform: uppercase;
@@ -29,11 +29,10 @@ a {
 
   &:hover {
     color: $link-hover-color;
-    text-decoration: $link-hover-decoration;
+    text-decoration: none;
   }
-}
-
-img {
-  border: none;
+  &:active {
+    color: $link-active-color;
+  }
 }
 

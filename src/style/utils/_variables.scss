@@ -32,7 +32,7 @@ $label-color:           $white;
 //** Global textual link color.
 $link-color:            $black;
 $link-hover-color:      $blue-base;
-$link-hover-decoration: none;
+$link-active-color:     #CACACA;
 
 
 //== Typography
@@ -69,12 +69,19 @@ $line-height-base:        21 / $font-size-base;
 //
 //## Define the breakpoints at which your layout will change, adapting to different screen sizes.
 
-$bp-xsmall: 						320;
-$bp-small: 							480;
-$bp-medium: 						768;
-$bp-large: 							960;
-$bp-xlarge: 						1280;
-$bp-xxlarge: 						1440;
+$bp-xsmall:             320;
+$bp-small:              480;
+$bp-medium:             768;
+$bp-large:              960;
+$bp-xlarge:             1280;
+$bp-xxlarge:            1440;
+
+
+//== Other
+//
+//##
+
+$shadow: 0 0 15px 0 rgba(0,0,0,0.2);
 
 
 //== Navbar
@@ -114,5 +121,3 @@ $bp-xxlarge: 						1440;
 //== Modals
 //
 //##
-
-

@@ -1,0 +1,40 @@
+.promo-list {
+  padding: 0 calc-percent(20, $bp-xsmall);
+  text-align: center;
+  background-color: #EEEEEE;
+  
+
+  &__item {
+    padding-top: 30px;
+    border-bottom: 1px solid #D6D6D6;
+
+
+    &:last-child {
+      border: none;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    padding-bottom: 15px;
+    font-weight: bold;
+    font-size: calc-rem(18);
+    line-height: calc-lh(26,18);
+  }
+
+  &__number,
+  &__description {
+    margin: 0;
+    font-weight: normal;
+    font-size: calc-rem(14);
+    line-height: calc-lh(21, 14);
+  }
+
+  &__number {
+    padding-bottom: 20px;
+  }
+
+  &__description {
+    padding-bottom: 30px;
+  }
+}

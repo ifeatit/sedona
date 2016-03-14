@@ -1,24 +1,26 @@
 'use strict';
 
-var gulp = require('gulp'),
-  watch = require('gulp-watch'),
-  prefixer = require('gulp-autoprefixer'),
-  uglify = require('gulp-uglify'),
-  sass = require('gulp-sass'),
-  sourcemaps = require('gulp-sourcemaps'),
-  rigger = require('gulp-rigger'),
-  cssmin = require('gulp-cssnano'),
-  imagemin = require('gulp-imagemin'),
-  pngquant = require('imagemin-pngquant'),
-  rimraf = require('rimraf'),
-  browserSync = require('browser-sync'),
-  lint = require('gulp-sass-lint'),
-  csscomb = require('gulp-csscomb'),
-  plumber = require('gulp-plumber'),
-  svgSprite = require('gulp-svg-sprite'),
-  svgmin = require('gulp-svgmin'),
-  cheerio = require('gulp-cheerio'),
-  reload = browserSync.reload;
+var gulp              = require('gulp'),
+    watch             = require('gulp-watch'),
+    autoprefixer      = require('autoprefixer'),
+    postcss           = require('gulp-postcss'),
+    lost              = require('lost'),
+    uglify            = require('gulp-uglify'),
+    sass              = require('gulp-sass'),
+    sourcemaps        = require('gulp-sourcemaps'),
+    rigger            = require('gulp-rigger'),
+    cssmin            = require('gulp-cssnano'),
+    imagemin          = require('gulp-imagemin'),
+    pngquant          = require('imagemin-pngquant'),
+    rimraf            = require('rimraf'),
+    browserSync       = require('browser-sync'),
+    lint              = require('gulp-sass-lint'),
+    csscomb           = require('gulp-csscomb'),
+    plumber           = require('gulp-plumber'),
+    svgSprite         = require('gulp-svg-sprite'),
+    svgmin            = require('gulp-svgmin'),
+    cheerio           = require('gulp-cheerio'),
+    reload            = browserSync.reload;
 
 // Basic svg-sprite configuration
 var svgSpriteConfig                = {
@@ -77,7 +79,7 @@ gulp.task('csscomb', function() {
 });
 
 gulp.task('stylelint', function () {
-  gulp.src('src/style/**/*.s+(a|c)ss')
+  gulp.src('src/style/utils/*.s+(a|c)ss')
     .pipe(lint())
     .pipe(lint.format())
     .pipe(lint.failOnError())
@@ -110,7 +112,7 @@ gulp.task('js:build', function () {
 
 gulp.task('style:build', function () {
   gulp.src(path.src.style) 
-    .pipe(sourcemaps.init())
+    .pipe(sourcemaps.init({loadMaps: true}))
     .pipe(plumber())
     .pipe(sass({
       includePaths: ['src/style/'],
@@ -118,9 +120,12 @@ gulp.task('style:build', function () {
       sourceMap: true,
       errLogToConsole: true
     }))
-    .pipe(prefixer())
+    .pipe(postcss([
+      lost(),
+      autoprefixer()
+    ]))
     .pipe(cssmin())
-    .pipe(sourcemaps.write())
+    .pipe(sourcemaps.write('./', {}))
     .pipe(gulp.dest(path.build.css))
     .pipe(reload({stream: true}));
 });

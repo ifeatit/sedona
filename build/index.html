@@ -31,7 +31,7 @@
         <li class="main-menu__list-item"><a class="main-menu__list-link main-menu__list-link--disabled" href="#">Карта штата</a></li>
         <li class="main-menu__list-item"><a class="main-menu__list-link" href="#">Гостиницы</a></li>
         <li class="main-menu__list-item">
-          <a class="main-menu__list-link main-menu__list-link--logo logo" href="index.html">
+          <a class="logo main-menu__list-link main-menu__list-link--logo" href="index.html">
             <img src="img/logo-sedona@1x.png" srcset="img/logo-sedona@2x.png 2x, img/logo-sedona@3x.png 3x" width="67" height="56" alt="logo-sedona">
           </a>
         </li>
@@ -65,7 +65,9 @@
       </div>
       <div class="single-promo__number">&ndash;№1&ndash;</div>
       <p class="single-promo__description">Седона не атракцион для туристов, там течет своя жизнь</p>
-      <div class="single-promo__image single-promo__image--left"></div>
+      <div class="single-promo__image">
+        <img src="pic/photo-city@1x.jpg" width="800" height="400" srcset="pic/photo-city@2x.jpg 2x" alt="photo-city">
+      </div>
     </div>
     <section class="features-list">
       <div class="features-list__item">
@@ -84,7 +86,7 @@
         </span>
         Еда
         </h2>
-        <div class="features-list__description">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</div>
+        <div class="features-list__description">Всегда заказывайте фирменный бургер, Вы не разочаруетесь!</div>
       </div>
       <div class="features-list__item">
         <h2 class="features-list__title">
@@ -103,7 +105,9 @@
       </div>
       <div class="single-promo__number">&ndash;№2&ndash;</div>
       <p class="single-promo__description">Да, по нему можно пройти! Если, конечно, вы осмелитесь</p>
-      <div class="single-promo__image single-promo__image--right"></div>
+      <div class="single-promo__image">
+        <img src="pic/photo-bridge@1x.jpg" width="800" height="400" srcset="pic/photo-bridge@2x.jpg 2x" alt="photo-bridge">
+      </div>
     </div>
     <div class="promo-list">
       <div class="promo-list__item">
@@ -125,61 +129,98 @@
     <section class="search-hotel">
       <div class="search-hotel__title">Заинтересовались?</div>
       <p class="search-hotel__description">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-      <div class="search-hotel__btn">Поиск гостиницы в Седоне</div>
-      <div class="search-hotel-popup search-hotel-popup--close">
-        <form class="search-hotel-popup__form" action="/search" method="post">
-          <fieldset class="search-hotel-popup__row">
+      <div class="search-hotel-popup">
+        <button class="btn btn--secondary search-hotel-popup__btn-open" data-a11y-toggle="search-hotel-popup__form" type="button">Поиск гостиницы в Седоне</button>
+        <form class="search-hotel-popup__form" id="search-hotel-popup__form" action="/search" method="post">
+          <fieldset class="search-hotel-popup__fieldset">
             <label class="search-hotel-popup__label" for="date-in">Дата заезда:</label>
             <input class="search-hotel-popup__input search-hotel-popup__input--date" type="date" name="date-in" id="date-in" value="2014-04-24">
-            <span class="search-hotel-popup__icon-calendar"></span>
+            <span class="search-hotel-popup__icon-calendar">
+              <svg><use xlink:href="#icon-calendar"/></svg>
+            </span>
           </fieldset>
-          <fieldset class="search-hotel-popup__row">
+          <fieldset class="search-hotel-popup__fieldset">
             <label class="search-hotel-popup__label" for="date-out">Дата выезда:</label>
             <input class="search-hotel-popup__input search-hotel-popup__input--date" type="date" name="date-out" id="date-out" value="2014-07-04">
-            <span class="search-hotel-popup__con-calendar"></span>
+            <span class="search-hotel-popup__icon-calendar">
+              <svg><use xlink:href="#icon-calendar"/></svg>
+            </span>
           </fieldset>
-          <fieldset class="search-hotel-popup__row">
-            <fieldset class="search-hotel-popup__counter">
-              <label class="search-hotel-popup__label" for="counter-adult">Взрослые:</label>
-              <button class="search-hotel-popup__icon-minus" type="button" tabindex="-1"></button>
-              <input class="search-hotel-popup__input search-hotel-popup__input--counter" type="text" name="counter-adult" id="counter-adult" value="2">
-              <button class="search-hotel-popup__input__icon-plus" type="button" tabindex="-1"></button>
-            </fieldset>
-            <fieldset class="search-hotel-popup__counter">
-              <label class="search-hotel-popup__label" for="counter-children">Дети:</label>
-              <button class="search-hotel-popup__icon-minus" type="button" tabindex="-1"></button>
-              <input class="search-hotel-popup__input search-hotel-popup__input--counter" type="text" name="counter-children" id="counter-children" value="0">
-              <button class="search-hotel-popup__input__icon-plus" type="button" tabindex="-1"></button>
-            </fieldset>
+          <fieldset class="search-hotel-popup__fieldset">
+            <div class="grid">
+              <div class="grid__xsmall-col-1-2">
+                <fieldset class="search-hotel-popup__counter">
+                  <label class="search-hotel-popup__label" for="counter-adult">Взрослые:</label>
+                  <div class="search-hotel-popup__counter-wrapper">
+                    <a class="search-hotel-popup__icon-minus" href="#">
+                      <svg><use xlink:href="#icon-minus"/></svg>
+                    </a>
+                    <input class="search-hotel-popup__input search-hotel-popup__input--counter" type="text" name="counter-adult" id="counter-adult" value="2">
+                    <a class="search-hotel-popup__icon-plus" href="#">
+                      <svg><use xlink:href="#icon-plus"/></svg>
+                    </a>
+                  </div>
+                </fieldset>
+              </div>
+              <div class="grid__xsmall-col-1-2">
+                <fieldset class="search-hotel-popup__counter">
+                  <label class="search-hotel-popup__label" for="counter-children">Дети:</label>
+                  <div class="search-hotel-popup__counter-wrapper">
+                    <a class="search-hotel-popup__icon-minus" href="#">
+                      <svg><use xlink:href="#icon-minus"/></svg>
+                    </a>
+                    <input class="search-hotel-popup__input search-hotel-popup__input--counter" type="text" name="counter-children" id="counter-children" value="0">
+                    <a class="search-hotel-popup__icon-plus" href="#">
+                      <svg><use xlink:href="#icon-plus"/></svg>
+                    </a>
+                  </div>
+                </fieldset>
+              </div>
+            </div>
           </fieldset>
-          <input class="search-hotel-popup__btn" type="submit" value="Найти">
+          <input class="btn btn--primary search-hotel-popup__btn-search" type="submit" value="Найти">
         </form>
       </div>
     </section>
   </div>
   <div class="map-footer">
-    <div class="map-footer__wrapper"></div>
+    <div class="map-footer__wrapper" id="map" style="height: 100%;"></div>
     <div class="main-footer">
       <section class="main-footer__hashtag"><a class="main-footer__hashtag-link" href="">#Visitsedona</a></section>
       <section class="main-footer__social-links">
         <ul class="social-links-list">
-          <li><a class="social-links-list__item social-links-list__item--twiter" href="#">twitter</a></li>
-          <li><a class="social-links-list__item social-links-list__item--facebook" href="#">facebook</a></li>
-          <li><a class="social-links-list__item social-links-list__item--youtube" href="#">youtube</a></li>
+          <li class="social-links-list__item"><a class="social-links-list__link" href="#">twitter
+          <svg><use xlink:href="#icon-twitter"/></svg>
+          </a></li>
+          <li class="social-links-list__item"><a class="social-links-list__link" href="#">facebook
+          <svg><use xlink:href="#icon-facebook"/></svg>
+          </a></li>
+          <li class="social-links-list__item"><a class="social-links-list__link" href="#">youtube
+          <svg><use xlink:href="#icon-youtube"/></svg>
+          </a></li>
         </ul>
       </section>
-      <section class="main-footer__copyright">
-        <div class="copyright-link">
-          <p class="copyright-link__title">Website by</p>
-          <div class="copyright-link__icon--by"></div>
+      <section class="copyright main-footer__copyright">
+        <div class="copyright__item">
+          <span class="copyright__description">Website by</span>
+          <a class="copyright__link" href="#">
+          logo-by
+          <svg><use xlink:href="#logo-glukhanko"/></svg>
+          </a>
         </div>
-        <div class="copyright-link">
-          <div class="copyright-link__title">for</div>
-          <div class="copyright-link__icon--for"></div>
+        <div class="copyright__item">
+          <span class="copyright__description">for</span>
+          <a class="copyright__link" href="#">
+          logo-htmlacademy
+          <svg><use xlink:href="#logo-htmlacademy"/></svg>
+          </a>
         </div>
       </section>
     </div>
   </div>
   <script src="js/main.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWeVSJiye5lnIjiItOdq7tkSWcEPaLFBY&callback=initMap"
+    async defer>
+  </script>
 </body>
 </html>

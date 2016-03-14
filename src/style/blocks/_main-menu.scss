@@ -13,7 +13,7 @@
 
 .main-menu__toggle {
   position: absolute;
-  right: percentage(20,$bp-xsmall);
+  right: calc-percent(20,$bp-xsmall);
   display: inline-block;
 
 
@@ -127,17 +127,6 @@
   }
 }
 
-
-.logo {
-  display: inline-block;
-  width: 137px;
-  height: 70px;
-  padding: 0;
-  background-image: url('../img/logo-triangle.svg');
-  background-repeat: no-repeat;
-}
-
-
 @include bp-medium {
   .main-menu__list {
     display: flex;
@@ -176,8 +165,8 @@
     &-link {
       & {
         padding: 15px 0;
-        font-size: rem(14);
-        line-height: lh(26,14);
+        font-size: calc-rem(14);
+        line-height: calc-lh(26,14);
         color: $black;
       }
 
@@ -209,6 +198,7 @@
       }
 
       &--logo {
+        display: inline-block;
         padding: 0;
       }
     }

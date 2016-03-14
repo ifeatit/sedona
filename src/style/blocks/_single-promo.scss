@@ -18,8 +18,8 @@
     padding-top: 40px;
     margin-bottom: 15px;
     font-weight: bold;
-    font-size: rem(18);
-    line-height: lh(26,18);
+    font-size: calc-rem(18);
+    line-height: calc-lh(26,18);
     color: inherit;
   }
 
@@ -36,25 +36,42 @@
   &__number,
   &__description {
     font-weight: normal;
-    font-size: rem(14);
-    line-height: lh(21,14);
+    font-size: calc-rem(14);
+    line-height: calc-lh(21,14);
     color: inherit;
   }
 
   &__image {
+    // height: 256px;
+    // background-color: #E9F3DE;
+    // background-repeat: no-repeat;
+    // background-size: cover;
+
+    // &--left {
+    //   background-image: url('../pic/photo-city@1x.jpg');
+    //   @include image-2x('../pic/photo-city@2x.jpg');
+    // }
+
+    // &--right {
+    //   background-image: url('../pic/photo-bridge@1x.jpg');
+    //   @include image-2x('../pic/photo-bridge@2x.jpg');
+    // }
+    
+    //Emulation "background-size: cover" for img tag
+    position: relative;
     height: 256px;
+    text-align: left;
     background-color: #E9F3DE;
-    background-repeat: no-repeat;
-    background-size: cover;
+    overflow: hidden;
 
-    &--left {
-      background-image: url('../pic/photo-city@1x.jpg');
-      @include image-2x('../pic/photo-city@2x.jpg');
-    }
 
-    &--right {
-      background-image: url('../pic/photo-bridge@1x.jpg');
-      @include image-2x('../pic/photo-bridge@2x.jpg');
+    & > img {
+      position: absolute;
+      top: 50%;
+      max-width: 100%;
+      height: auto;
+      min-width: 512px; //256*2
+      transform: translateY(-50%);
     }
   }
 }

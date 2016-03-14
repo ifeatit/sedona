@@ -4,16 +4,16 @@
 
 
 // Calculate rem
-@function rem($pixels, $context: $font-size-browser) {
+@function calc-rem($pixels, $context: $font-size-browser) {
   @return #{$pixels/$context}rem
 }
 
 // Calculate line-height
-@function lh($pixels, $context) {
-  @return #{$pixels/$context}
+@function calc-lh($pixels, $context) {
+  @return ($pixels / $context)
 }
 
 // Calculate percentage width
-@function percentage($pixels, $context) {
-  @return $pixels/$context*100%
+@function calc-percent($pixels, $context) {
+  @return ($pixels / $context) * 100%;
 }

@@ -4,23 +4,23 @@
 
 
 h1 {
-  font-size: rem(24);
-  line-height: lh(36,24);
+  font-size: calc-rem(24);
+  line-height: calc-lh(36,24);
   font-family: $font-family-base;
   color: $black;
 }
 
 h2 {
-  font-size: rem(18);
-  line-height: lh(40,18);
+  font-size: calc-rem(18);
+  line-height: calc-lh(40,18);
   font-family: $font-family-base;
   color: $black;
 }
 
 p {
   //margin: (0) (0) ($spacing);
-  font-size: rem(18);
-  line-height: lh(26,18);
+  font-size: calc-rem(18);
+  line-height: calc-lh(26,18);
   font-family: $font-family-base;
   color: $black;
 }
