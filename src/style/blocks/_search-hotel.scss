@@ -1,7 +1,11 @@
 .search-hotel {
   padding-top: 30px;
   text-align: center;
+  
 
+  @include bp-medium {
+    padding-top: 50px;
+  }
 
   &__title {
     padding-bottom: 20px;
@@ -11,6 +15,7 @@
 
     @include bp-medium {
       font-size: calc-rem(30);
+      padding-bottom: 30px;
     }
   } 
 
@@ -22,5 +27,10 @@
     font-weight: normal;
     font-size: calc-rem(14);
     line-height: calc-lh(21,14);
+
+
+    @include bp-medium {
+      padding-bottom: 45px;
+    }
   }
 }
