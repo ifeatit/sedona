@@ -8,6 +8,10 @@
     font-weight: bold;
     font-size: calc-rem(21);
     line-height: calc-lh(26,21);
+
+    @include bp-medium {
+      font-size: calc-rem(30);
+    }
   } 
 
   &__description {

@@ -12,13 +12,34 @@
     font-size: calc-rem(21);
     line-height: calc-lh(26,21);
     margin-bottom: 40px;
+
+    @include bp-medium {
+      margin-bottom: 0;
+      line-height: 48px;
+    }
   }
 
   &__social-links {
     margin-bottom: 40px;
+
+    @include bp-medium {
+      margin-bottom: 0;
+    }
   }
 
   &__copyright {
     margin-bottom: 25px;
+
+    @include bp-medium {
+      margin-bottom: 0;
+    }
+  }
+
+  &__description {
+    line-height: 48px;
+  }
+
+  @include bp-medium {
+    padding: 35px 0;
   }
 }

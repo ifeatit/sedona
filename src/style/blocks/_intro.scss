@@ -3,6 +3,18 @@
   margin-top: 40px;
   color: $text-color;
   text-align: center;
+
+
+  &__title {
+  margin-bottom: 30px;
+  font-weight: bold;
+  font-size: calc-rem(18);
+  line-height: calc-lh(26,18);
+
+    @include bp-medium {
+      font-size: calc-rem(21);
+    }
+  }
 }
 
 
@@ -11,6 +23,10 @@
   font-weight: bold;
   font-size: calc-rem(18);
   line-height: calc-lh(26,18);
+
+  @include bp-medium {
+    font-size: calc-rem(21);
+  }
 }
 
 
@@ -19,4 +35,8 @@
   font-weight: normal;
   font-size: calc-rem(14);
   line-height: calc-lh(26,14);
+
+  @include bp-medium {
+    margin-bottom: 30px;
+  }
 }

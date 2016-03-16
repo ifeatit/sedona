@@ -9,7 +9,14 @@
   @include image-2x('../pic/photo-background@2x.jpg');
   background-position: 50% 0;
   background-size: 765px 512px;
-
+  
+  @include bp-medium {
+    height: 512px;
+    padding-top: 77px;
+    background-position: 50% 30%;
+    background-size: cover;
+  }
+  
   &:after {
     content: '';
     position: absolute;
@@ -46,6 +53,10 @@
   height: 35px;
   margin-bottom: 8px;
   fill: $blue-base;
+
+  @include bp-medium {
+    height: 45px;
+  }
 }
 
 
@@ -53,16 +64,28 @@
   height: 22px;
   margin-bottom: 60px;
   fill: $brown-base;
+
+  @include bp-medium {
+    height: 32px;
+  }
 }
 
 
-.headline__main-title{
+.headline__main-title {
   height: 48px;
   margin-bottom: 67px;
   fill: $white;
+
+  @include bp-medium {
+    height: 80px;
+  }
 }
 
 .headline__quote {
   height: 55px;
   fill: $white;
+
+  @include bp-medium {
+    height: 80px;
+  }
 }
