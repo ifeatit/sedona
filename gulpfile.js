@@ -157,8 +157,8 @@ gulp.task('svg:build', function () {
       parserOptions: { xmlMode: true }
     }))
     .pipe(svgSprite(svgSpriteConfig))     
-    // .pipe(gulp.dest('src/template/'))  // for inlining svg into DOM
-    .pipe(gulp.dest('build/img/'))        // for insertion svg using Local Srorage(doesn't work without domain)
+    .pipe(gulp.dest('src/template/'))  // for inlining svg into DOM
+    // .pipe(gulp.dest('build/img/'))        // for insertion svg using Local Srorage(doesn't work without domain)
     .pipe(reload({stream: true}));
 });
 
