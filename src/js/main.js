@@ -10,6 +10,5 @@
  */
 
 //= partials/helper.js
-
-
 //= partials/google-map.js
+//= partials/sprite-symbol.js

@@ -103,9 +103,9 @@ gulp.task('html:build', function () {
 gulp.task('js:build', function () {
   gulp.src(path.src.js) 
     .pipe(rigger()) 
-    .pipe(sourcemaps.init()) 
+    .pipe(sourcemaps.init({loadMaps: true}))
     .pipe(uglify()) 
-    .pipe(sourcemaps.write()) 
+    .pipe(sourcemaps.write('./', {}))
     .pipe(gulp.dest(path.build.js))
     .pipe(reload({stream: true}));
 });
@@ -156,8 +156,9 @@ gulp.task('svg:build', function () {
       },
       parserOptions: { xmlMode: true }
     }))
-    .pipe(svgSprite(svgSpriteConfig))
-    .pipe(gulp.dest('src/template/'))
+    .pipe(svgSprite(svgSpriteConfig))     
+    // .pipe(gulp.dest('src/template/'))  // for inlining svg into DOM
+    .pipe(gulp.dest('build/img/'))        // for insertion svg using Local Srorage(doesn't work without domain)
     .pipe(reload({stream: true}));
 });
 
