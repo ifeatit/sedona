@@ -202,7 +202,7 @@ gulp.task('watch', function(){
   watch([path.watch.img], function(event, cb) {
     gulp.start('image:build');
   });
-  watch([path.watch.img], function(event, cb) {
+  watch([path.watch.pic], function(event, cb) {
     gulp.start('picture:build');
   });
   watch([path.watch.fonts], function(event, cb) {
