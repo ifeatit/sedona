@@ -69,6 +69,7 @@ $line-height-base:        21 / $font-size-base;
 //
 //## Define the breakpoints at which your layout will change, adapting to different screen sizes.
 
+$bp-zero:               0;
 $bp-xsmall:             320;
 $bp-small:              480;
 $bp-medium:             768;
@@ -82,42 +83,5 @@ $bp-xxlarge:            1440;
 //##
 
 $shadow: 0 0 15px 0 rgba(0,0,0,0.2);
+$transition-base: 0.3s all;
 
-
-//== Navbar
-//
-//##
-
-
-//== Navs
-//
-//##
-
-
-//== Pagination
-//
-//##
-
-
-
-//== Pager
-//
-//##
-
-
-//== Form states and alerts
-//
-//## Define colors for form feedback states and, by default, alerts.
-
-
-
-
-//== Labels
-//
-//##
-
-
-
-//== Modals
-//
-//##

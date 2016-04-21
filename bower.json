@@ -11,6 +11,7 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "normalize.css": "*"
+    "normalize.css": "*",
+    "sass-mq": "~3.2.9"
   }
 }

@@ -1,8 +1,8 @@
 .logo {
   display: inline-block;
-  width: 137px;
-  height: 71px;
+  //width: 137px;
+  //height: 71px;
   padding: 0;
-  background-image: url('../img/logo-triangle.svg');
+  @include svgSprite(logo-triangle);
   background-repeat: no-repeat;
 }

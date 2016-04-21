@@ -182,12 +182,13 @@
       
       &--active {
         color: $brown-base;
+        cursor: default;
       }
       &--active:hover {
-        color: $brown-light;
+        color: $brown-base;
       }
       &--active:active {
-        color: #D6D0CC;
+        color: $brown-base;
       }
 
       &--disabled,

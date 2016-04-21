@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  width="17" height="17" viewBox="0 0 17 17">
+  <defs>
+    
+
+    <filter id="color-overlay-1" filterUnits="userSpaceOnUse">
+      <feFlood flood-color="#81b3d2" flood-opacity="1"/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+      <feBlend mode="normal" in2="SourceGraphic" result="colorOverlay"/>
+    </filter>
+  </defs>
+  <path d="M8.165,0.009 C8.165,0.009 10.420,6.002 10.420,6.002 C10.420,6.002 16.315,6.002 16.315,6.002 C16.315,6.002 11.813,10.295 11.813,10.295 C11.813,10.295 13.202,16.118 13.202,16.118 C13.202,16.118 8.165,12.650 8.165,12.650 C8.165,12.650 3.128,16.118 3.128,16.118 C3.128,16.118 4.517,10.295 4.517,10.295 C4.517,10.295 0.015,6.002 0.015,6.002 C0.015,6.002 5.910,6.002 5.910,6.002 C5.910,6.002 8.165,0.009 8.165,0.009 Z" id="path-1" class="cls-2" fill-rule="evenodd"/>
+</svg>

@@ -12,3 +12,7 @@
 //= partials/helper.js
 //= partials/google-map.js
 
+
+
+
+

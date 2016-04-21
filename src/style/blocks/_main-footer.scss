@@ -1,8 +1,5 @@
 .main-footer {
-  position: absolute;
-  bottom: 0;
   width: 100%;
-  padding-top: 30px;
   text-align: center;
   background-color: rgba(255,255,255,0.9);
 
@@ -12,6 +9,10 @@
     font-size: calc-rem(21);
     line-height: calc-lh(26,21);
     margin-bottom: 40px;
+
+    &-link {
+      @include transition-all;
+    }
 
     @include bp-medium {
       margin-bottom: 0;

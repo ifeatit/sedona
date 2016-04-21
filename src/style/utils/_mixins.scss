@@ -6,6 +6,13 @@
 //
 //## 
 
+@mixin bp-zero {
+  @media (min-width: #{$bp-zero}px) {
+    @content;
+  }
+}
+
+
 @mixin bp-xsmall {
   @media (min-width: #{$bp-xsmall}px) {
     @content;
@@ -65,3 +72,38 @@
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+
+
+@mixin clearfix {
+  &::after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+}
+
+@mixin transition-all {
+  transition: 0.3s all;
+}
+
+
+// For use with the gulp sprite plugin
+@mixin svgSprite($icon, $type: all) {
+  @if $type == all {
+    // Shares the backgrounds
+    @extend %svgSprite;
+  }
+
+  $iconMap: icon-attr($icon);
+
+  // Outputs dimensions in em
+  @if $type == all or $type == size {
+    width: map-get($iconMap, width);
+    height: map-get($iconMap, height);
+  }
+  // Outputs background position in em
+  @if $type == all or $type == bg {
+    background-position: map-get($iconMap, x) map-get($iconMap, y);
+  }
+}
+
