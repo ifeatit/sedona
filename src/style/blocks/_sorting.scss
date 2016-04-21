@@ -23,8 +23,10 @@
     vertical-align: bottom;
 
     &-value {
-      display: inline-block;
-      width: 28px;
+      @include bp-medium {
+        display: inline-block;
+        width: 28px;
+      }
     }
   }
 

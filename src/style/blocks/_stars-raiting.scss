@@ -12,11 +12,15 @@
   &__list {
     margin: 0 auto;
     margin-top: 5px;
-    margin-bottom: 40px;
+    
     padding: 0;
     list-style: none;
     text-align: center;
     @include clearfix();
+
+    @include bp-medium {
+      margin-bottom: 40px;
+    }
   }
 
   &__item {
