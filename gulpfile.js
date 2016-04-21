@@ -22,16 +22,6 @@ var gulp              = require('gulp'),
     cheerio           = require('gulp-cheerio'),
     reload            = browserSync.reload;
 
-// Basic svg-sprite configuration
-var svgSpriteConfig                = {
-  mode                : {
-    symbol             : {     // Activate the «symbol» mode
-      dest : '.',
-      sprite : 'sprite.symbol.html'
-    }
-  }
-};
-
 var path = {
   build: {
     html: 'build/',
@@ -47,6 +37,7 @@ var path = {
     style: 'src/style/main.scss',
     img: 'src/img/*.*',
     imgSvg: 'src/img/sprite-svg/*.svg',
+    cssSvg: 'src/img/sprite-svg-css/*.svg',
     pic: 'src/pic/**/*.*',
     fonts: 'src/fonts/**/*.*'
   },
@@ -56,6 +47,7 @@ var path = {
     style: 'src/style/**/*.scss',
     img: 'src/img/*.*',
     imgSvg: 'src/img/sprite-svg/*.svg',
+    cssSvg: 'src/img/sprite-svg-css/*.svg',
     pic: 'src/pic/**/*.*',
     fonts: 'src/fonts/**/*.*'
   },
@@ -71,7 +63,44 @@ var config = {
   port: 9000,
   logPrefix: 'Sedona'
 };
- 
+
+// Basic svg-sprite configuration
+
+var svgSpriteConfig = {
+  imgSvg: {
+    mode: {
+      symbol: {     // Activate the «symbol» mode
+        dest: '.',
+        sprite: 'sprite.symbol.html'
+      }
+    }
+  },
+  cssSvg: {
+    shape: {
+      spacing: {
+        padding: 0
+      }
+    },
+    mode: {
+      css: {
+        layout: 'packed',
+        sprite: 'sprite.css.svg',
+        dest: './',
+        bust: false,
+        render : {
+          scss: {
+            dest: '../../src/style/utils/_svg-sprite.scss',
+            template: 'src/template/sprite.css.tpl.scss'
+          }
+        }
+      }
+    },
+    variables: {
+      mapname: 'icons'
+    }
+  }
+};
+
 gulp.task('csscomb', function() {
   return gulp.src('src/style/main.scss')
     .pipe(csscomb())
@@ -142,7 +171,7 @@ gulp.task('image:build', function () {
     .pipe(reload({stream: true}));
 });
 
-gulp.task('svg:build', function () {
+gulp.task('imgSvg:build', function () {
   gulp.src(path.src.imgSvg) 
     .pipe(svgmin({
       js2svg: {
@@ -156,9 +185,21 @@ gulp.task('svg:build', function () {
       },
       parserOptions: { xmlMode: true }
     }))
-    .pipe(svgSprite(svgSpriteConfig))     
+    .pipe(svgSprite(svgSpriteConfig.imgSvg))     
     .pipe(gulp.dest('src/template/'))  // for inlining svg into DOM
     // .pipe(gulp.dest('build/img/'))        // for insertion svg using Local Srorage(doesn't work without domain)
+    .pipe(reload({stream: true}));
+});
+
+gulp.task('cssSvg:build', function () {
+  gulp.src(path.src.cssSvg) 
+    .pipe(svgmin({
+      js2svg: {
+        pretty: true
+      }
+    }))
+    .pipe(svgSprite(svgSpriteConfig.cssSvg))     
+    .pipe(gulp.dest(path.build.img))      
     .pipe(reload({stream: true}));
 });
 
@@ -180,7 +221,8 @@ gulp.task('fonts:build', function() {
 });
 
 gulp.task('build', [
-  'svg:build',
+  'imgSvg:build',
+  'cssSvg:build',
   'js:build',
   'style:build',
   'fonts:build',
@@ -191,7 +233,10 @@ gulp.task('build', [
 
 gulp.task('watch', function(){
   watch([path.watch.imgSvg], function(event, cb) {
-    gulp.start('svg:build');
+    gulp.start('imgSvg:build');
+  });
+  watch([path.watch.cssSvg], function(event, cb) {
+    gulp.start('cssSvg:build');
   });
   watch([path.watch.style], function(event, cb) {
     gulp.start('style:build');
