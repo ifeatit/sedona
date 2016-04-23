@@ -174,12 +174,11 @@
         left: 0;
         @include svgSprite(icon-checkbox);
         transform: translateY(-50%);
-        @include transition-all;
+        transition: opacity 0.3s;
         opacity: 0.6;
       }
 
       &:hover:before {
-        transition: none;
         opacity: 1;
       }
     }
