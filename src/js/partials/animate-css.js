@@ -7,19 +7,11 @@
 						ths.addClass(inEffect).css("opacity", "1");
 					};
 				}, {
-					offset: "80%"
+					offset: "90%"
 				});
 
 			});
 		};
 	})(jQuery);
-
-(function runAnimation() {
-	$(".features-list__item").animated("zoomIn");
-	$(".promo-list__item").animated("zoomIn");
-	$(".search-hotel__title").animated("fadeInDown");
-	$(".search-hotel__description").animated("fadeInDown");
-	$(".search-hotel-popup__btn-open").animated("bounceInLeft");
-})();
 
 

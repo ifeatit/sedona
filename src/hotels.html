@@ -328,7 +328,19 @@
   </div>
   <script src="js/main.js"></script>
   <script>
-    $('.preloader').fadeOut();
+    window.onload = function() {
+      $('.preloader').fadeOut();
+      (function runAnimation() {
+        $(".headline__sub-title").animated("fadeInDown");
+        $(".headline__main-title").animated("fadeInDown");
+        $(".headline__quote").animated("fadeInDown");
+        $(".features-list__item").animated("zoomIn");
+        $(".promo-list__item").animated("zoomIn");
+        $(".search-hotel__title").animated("fadeInDown");
+        $(".search-hotel__description").animated("fadeInDown");
+        $(".search-hotel-popup__btn-open").animated("bounceInLeft");
+      })();
+    }
   </script>
 </body>
 </html>
