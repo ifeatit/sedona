@@ -13,6 +13,9 @@
   "devDependencies": {
     "normalize.css": "*",
     "sass-mq": "~3.2.9",
-    "respond": "~1.4.2"
+    "respond": "~1.4.2",
+    "animate.css": "~3.5.1",
+    "waypoints": "~4.0.0",
+    "jquery": "~2.2.3"
   }
 }
