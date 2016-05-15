@@ -14,13 +14,12 @@
 		};
 	})(jQuery);
 
-function runAnimation() {
+(function runAnimation() {
 	$(".features-list__item").animated("zoomIn");
 	$(".promo-list__item").animated("zoomIn");
 	$(".search-hotel__title").animated("fadeInDown");
 	$(".search-hotel__description").animated("fadeInDown");
 	$(".search-hotel-popup__btn-open").animated("bounceInLeft");
-}
+})();
 
-runAnimation();
 

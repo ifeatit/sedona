@@ -18,3 +18,5 @@ Custom
 //= partials/animate-css.js
 
 
+// Preloader 
+
