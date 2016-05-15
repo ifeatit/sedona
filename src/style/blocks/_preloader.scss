@@ -19,7 +19,7 @@
     width: 75px;
     height: 75px;
     margin: 0 auto;
-    margin-top: 50px;
+    transform-origin: center;
     transform: rotateZ(45deg);
   }
 
@@ -39,7 +39,7 @@
       width: 100%;
       height: 100%;
       background-color: #2BA0C7;
-      animation: foldthecube 1.2s infinite linear both;
+      animation: foldthecube 2.2s infinite linear both;
       transform-origin: 100% 100%;
     }
 
