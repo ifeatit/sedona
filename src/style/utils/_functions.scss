@@ -5,7 +5,7 @@
 
 // Calculate rem
 @function calc-rem($pixels, $context: $font-size-browser) {
-  @return #{$pixels/$context}rem
+  @return ($pixels / $context) + rem
 }
 
 // Calculate line-height
