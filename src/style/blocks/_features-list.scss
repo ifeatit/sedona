@@ -46,7 +46,7 @@
     }
 
     @include bp-medium {
-      position: initial;
+      position: static;
       width: 75px;
       height: 75px;
       margin: 0 auto;
